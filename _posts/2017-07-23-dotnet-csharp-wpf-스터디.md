@@ -1,10 +1,14 @@
 ---
 layout: post
 title: 2017-07-23-dotnet-csharp-wpf-스터디
+comments: true
+tags:
+- study
+- c#
+- .net
+- wpf
 ---
 
-
-@[study, c#, .net, wpf]
 
 
 <!-- TOC -->

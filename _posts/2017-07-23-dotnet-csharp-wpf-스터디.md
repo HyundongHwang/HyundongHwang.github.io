@@ -1,26 +1,24 @@
 ---
 layout: post
-title: 170723 .net c# wpf 스터디
+title: 2017-07-23-dotnet-csharp-wpf-스터디
 ---
 
 
-# 170723 .net c# wpf 스터디
 @[study, c#, .net, wpf]
 
 
 <!-- TOC -->
 
-- [170723 .net c# wpf 스터디](#170723-net-c-wpf-스터디)
-    - [Using WPF dll's in UWP app](#using-wpf-dlls-in-uwp-app)
-    - [닷넷프레임워크 히스토리](#닷넷프레임워크-히스토리)
-    - [Understanding .NET 2015](#understanding-net-2015)
-    - [닷넷 컴파일](#닷넷-컴파일)
-    - [WPF 어플리케이션 개발시 필요한 것들](#wpf-어플리케이션-개발시-필요한-것들)
-    - [C#, WPF 특수 문법/기능](#c-wpf-특수-문법기능)
-    - [닷넷월드의 용어정리](#닷넷월드의-용어정리)
-    - [C# 코딩 컨벤션](#c-코딩-컨벤션)
-    - [참고링크](#참고링크)
-    - [추천도서](#추천도서)
+- [Using WPF dll's in UWP app](#using-wpf-dlls-in-uwp-app)
+- [닷넷프레임워크 히스토리](#닷넷프레임워크-히스토리)
+- [Understanding .NET 2015](#understanding-net-2015)
+- [닷넷 컴파일](#닷넷-컴파일)
+- [WPF 어플리케이션 개발시 필요한 것들](#wpf-어플리케이션-개발시-필요한-것들)
+- [C#, WPF 특수 문법/기능](#c-wpf-특수-문법기능)
+- [닷넷월드의 용어정리](#닷넷월드의-용어정리)
+- [C# 코딩 컨벤션](#c-코딩-컨벤션)
+- [참고링크](#참고링크)
+- [추천도서](#추천도서)
 
 <!-- /TOC -->
 

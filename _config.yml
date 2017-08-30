@@ -8,11 +8,11 @@ gems: [jekyll-paginate]
 
 # Setup
 title:               황현동 블로그
-tagline:             'tagline'
-description:         'description'
+tagline:             '개발, 인생, 유우머'
+description:         '목차'
 url:                 https://hyundonghwang.github.io/
 baseurl:             ''
-paginate:            5
+paginate:            20
 
 # About/contact
 author:

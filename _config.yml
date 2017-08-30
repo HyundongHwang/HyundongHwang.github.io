@@ -3,7 +3,7 @@
 #
 
 # Name of your site (displayed in the header)
-name: 황현동
+name: 황현동 블로그
 
 # Short bio or description (displayed in the header)
 description: 개발, 인생, 유머
@@ -19,14 +19,14 @@ avatar: https://avatars2.githubusercontent.com/u/5696570
 footer-links:
   dribbble:
   email: h2d2002@naver.com
-  facebook: https://www.facebook.com/h2d2002
+  facebook: h2d2002
   flickr:
-  github: https://github.com/HyundongHwang
-  instagram: https://www.instagram.com/hyundongwilliamhwang
-  linkedin: https://www.linkedin.com/in/hhd2002/
+  github: HyundongHwang
+  instagram: hyundongwilliamhwang
+  linkedin: hhd2002
   pinterest:
   rss: # just type anything here for a working RSS icon
-  twitter: https://twitter.com/hhd2002
+  twitter: hhd2002
   stackoverflow: users/2049426/hyundong-hwang
   youtube: # channel/<your_long_string> or user/<user-name>
   googleplus: # anything in your profile username that comes after plus.google.com/

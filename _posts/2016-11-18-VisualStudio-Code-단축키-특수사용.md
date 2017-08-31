@@ -43,18 +43,10 @@ tags:
 http://code.visualstudio.com/B?utm_expid=101350005-31.YsqwCVJESWmc4UCMDLsNRw.1
 
 
----
-키 : 설명
-CTRL + \ : 화면분할
-CTRL + ` : 내부에서 쉘열기
-CTRL + <\-> : 축소
----
-
 
 ## 단축키
----
 | 키 | 설명 |
-| - | - |
+| :--- | :--- |
 | CTRL + \ | 화면분할 |
 | CTRL + ` | 내부에서 쉘열기 |
 | CTRL + <\-> | 축소 |
@@ -86,9 +78,6 @@ CTRL + <\-> : 축소
 | F5 | Stop Shift |
 | F8 | markdown 상세오류 보기 |
 | SHIFT + ALT + DRAG | 박스선택 |
-| a | b |
----
-
 
 
 ## 필수 익스텐션

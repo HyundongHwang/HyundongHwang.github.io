@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 2017-06-16-logcat-powershell-함수-패키지필터-레벨색상
+title: 170616 logcat powershell 함수(패키지필터, 레벨색상)
 comments: true
 tags:
 - logcat

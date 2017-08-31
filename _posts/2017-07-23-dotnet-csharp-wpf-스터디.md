@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 2017-07-23-dotnet-csharp-wpf-스터디
+title: 170723 .net c# wpf 스터디
 comments: true
 tags:
 - study

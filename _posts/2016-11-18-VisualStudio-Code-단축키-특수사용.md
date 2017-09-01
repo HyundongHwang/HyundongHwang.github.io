@@ -43,58 +43,16 @@ tags:
 http://code.visualstudio.com/B?utm_expid=101350005-31.YsqwCVJESWmc4UCMDLsNRw.1
 
 
-| 키 | 설명 |
-|---|---|
-| CTRL + ALT + DOWN | 멀티선택 |
-| CTRL + B | 사이드바 보기 |
-| CTRL + J | 하단패널 보기 |
-| CTRL + P | 파일팔레트 보기 |
-| CTRL + SHIFT + C | 외부에서 쉘열기 |
-| CTRL + SHIFT + E | 파일탐색기 보기 |
-| CTRL + SHIFT + F5 | Restart |
-| CTRL + SHIFT + G | GIT 보기 |
-| CTRL + SHIFT + M | 문제 보기 |
-| CTRL + SHIFT + O | 심볼팔레트 보기 |
-| CTRL + SHIFT + P | 명령팔레트 보기 |
-| CTRL + SHIFT + P, beautify | 파일 인덴트 정리 |
-| CTRL + SHIFT + U | 출력 보기 |
-| CTRL + SHIFT + V | 미리 보기 |
-| CTRL + SHIFT + X | EXTENSION 보기 |
-| CTRL + SHIFT + Y | 디버그콘솔 보기 |
-| CTRL + SPACE | 자동완성 |
-| CTRL + W | 창닫기 |
-| F10 | Step Over |
-| F11 | 전체화면 |
-| F11 | Step Into, Step Out Shift |
-| F12 | 정의로 이동 |
-| F2 | 이름변경 |
-| F5 | Continue / Pause |
-| F5 | Stop Shift |
-| F8 | markdown 상세오류 보기 |
-| SHIFT + ALT + DRAG | 박스선택 |
-
-
-
----
-a : 123
-b : 456 : qwe
-c : 789 : rty : yui
-- aa
-- bb
-- cc
----
-
-
 
 
 ## 단축키
 
 | 키 | 설명 |
 |---|---|
-| `CTRL + \` | 화면분할 |
-| `CTRL + <\->` | 축소 |
-| `CTRL + <+>` | 확대 |
-| CTRL + ` | 내부에서 쉘열기 |
+| ``CTRL + \`` | 화면분할 |
+| ``CTRL + <\->`` | 축소 |
+| ``CTRL + <+>`` | 확대 |
+| ``CTRL + ` `` | 내부에서 쉘열기 |
 | CTRL + ALT + DOWN | 멀티선택 |
 | CTRL + B | 사이드바 보기 |
 | CTRL + J | 하단패널 보기 |

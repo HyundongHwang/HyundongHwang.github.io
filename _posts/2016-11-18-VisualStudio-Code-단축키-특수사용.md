@@ -74,16 +74,27 @@ http://code.visualstudio.com/B?utm_expid=101350005-31.YsqwCVJESWmc4UCMDLsNRw.1
 | SHIFT + ALT + DRAG | 박스선택 |
 
 
-| CTRL + ` | 내부에서 쉘열기 |
+
+---
+a : 123
+b : 456 : qwe
+c : 789 : rty : yui
+- aa
+- bb
+- cc
+---
+
 
 
 
 ## 단축키
+
 | 키 | 설명 |
 |---|---|
 | `CTRL + \` | 화면분할 |
 | `CTRL + <\->` | 축소 |
 | `CTRL + <+>` | 확대 |
+| CTRL + ` | 내부에서 쉘열기 |
 | CTRL + ALT + DOWN | 멀티선택 |
 | CTRL + B | 사이드바 보기 |
 | CTRL + J | 하단패널 보기 |

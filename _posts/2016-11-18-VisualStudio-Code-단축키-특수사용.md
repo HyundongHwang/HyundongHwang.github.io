@@ -53,7 +53,7 @@ http://code.visualstudio.com/B?utm_expid=101350005-31.YsqwCVJESWmc4UCMDLsNRw.1
 
 ## 단축키
 | 키 | 설명 |
-| :--- | :--- |
+|---|---|
 | CTRL + \ | 화면분할 |
 | CTRL + ` | 내부에서 쉘열기 |
 | CTRL + <\-> | 축소 |

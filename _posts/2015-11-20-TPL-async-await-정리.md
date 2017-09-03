@@ -27,7 +27,7 @@ tags:
 
 ---
 
-![Alt text](./1447997697536.png)
+![Alt text](https://s26.postimg.org/gsdqqth7d/screenshot_76.png)
 
 ---
 

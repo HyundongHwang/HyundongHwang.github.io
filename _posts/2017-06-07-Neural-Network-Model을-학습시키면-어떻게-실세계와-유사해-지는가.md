@@ -17,9 +17,14 @@ tags:
 
 <!-- /TOC -->
 
+<br>
+<br>
+<br>
 
+머신러닝 공부하면서 첫글 올려봅니다. ㅎ
 
-머신러닝 공부하면서 첫글 올려봅니다. ㅎ<div>
-<br /></div>
+<br>
+<br>
+<br>
 
 <script src="https://htmlpartitionsync.azurewebsites.net/api/PartitionJs?url=https%3A%2F%2Fgithub.com%2FHyundongHwang%2FMyMlStudy%2Fblob%2Fmaster%2Fmy-examples%2Fnn-proof.md&xpath=%2F%2Farticle"></script>

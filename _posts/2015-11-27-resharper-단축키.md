@@ -14,10 +14,15 @@ tags:
 
 <!-- /TOC -->
 
-https://www.jetbrains.com/resharper/features/
-resharper는 역시 좋은 기능이 많다. 
-10 ultimate 업데이트 받은 기념으로 처음부터 문서를 다시 읽어봤다.
-더 많은 기능이 있지만 이중 불필요한 기능빼고 못외울 기능 빼고 대략 20가지 정도...
+<br>
+<br>
+<br>
+
+
+- https://www.jetbrains.com/resharper/features/
+- resharper는 역시 좋은 기능이 많다. 
+- 10 ultimate 업데이트 받은 기념으로 처음부터 문서를 다시 읽어봤다.
+- 더 많은 기능이 있지만 이중 불필요한 기능빼고 못외울 기능 빼고 대략 20가지 정도...
 
 | 단축키 | 설명 |
 | -- | -- |

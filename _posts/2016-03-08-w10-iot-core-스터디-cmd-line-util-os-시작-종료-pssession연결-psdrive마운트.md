@@ -22,26 +22,32 @@ tags:
 - [iot 부팅](#iot-부팅)
 - [iot core 초기연결](#iot-core-초기연결)
 - [장비 접속시 패스워드 스킵하기](#장비-접속시-패스워드-스킵하기)
-- [노트북, 디바이스간 파일공유123](#노트북-디바이스간-파일공유123)
+- [노트북, 디바이스간 파일공유](#노트북-디바이스간-파일공유)
 
 <!-- /TOC -->
 
+<br>
+<br>
+<br>
 
 ## IoT Core Command Line Utils
 https://ms-iot.github.io/content/en-US/win10/tools/CommandLineUtils.htm
 
 ### Update account password:
-```bash
+
+```powershell
 net user Administrator [new password]
 ```
 
 ### Set password
-```bash
+
+```powershell
 net user [account-username] [new-password]
 ```
 
 ### Query and set device name:
-```bash
+
+```powershell
 SetComputerName [new machinename]
 ```
 
@@ -64,17 +70,18 @@ SetComputerName [new machinename]
 - For further help, try `IotStartup help`
 
 ### Set Boot Option (Headless vs. headed boot):
-```bash
+
+```powershell
 setbootoption.exe [headed | headless]
 ```
 
 ### Device drivers:
-```bash
+```powershell
 devcon.exe /?
 ```
 
 ### Services:
-```bash
+```powershell
 net [start | stop] [service name]
 ```
 
@@ -83,7 +90,7 @@ To shut down your device, type `shutdown /s /t 0`
 To restart the device, use the /r switch instead with the command `shutdown /r /t 0`
 
 ### Set display resolution
-```bash
+```powershell
 SetDisplayResolution [width] [height]
 ```
 
@@ -94,7 +101,7 @@ c:\Program Files (x86)\Microsoft IoT\contfig.txt 복사 -->> 루트
 
 
 ## iot core 초기연결
-```bash
+```powershell
 PS C:\WINDOWS\system32> net start winrm
 
 PS C:\WINDOWS\system32> Set-Item WSMan:\localhost\Client\TrustedHosts -Value 169.254.112.99
@@ -148,7 +155,7 @@ d-----       10/30/2015   1:14 PM                Windows
 
 
 ## 장비 접속시 패스워드 스킵하기
-```bash
+```powershell
 PS C:\> $password = ConvertTo-SecureString "password" -AsPlainText -Force
 
 

@@ -12,9 +12,14 @@ tags:
 
 <!-- /TOC -->
 
-resharper 단축키 망가지면 개발 못할듯이 힘들다.
-나도 어느날 갑자기 단축키가 안되는 순간이 왔는데
-resharper, visual studio 리셋해도 안되더라...
+<br>
+<br>
+<br>
+
+
+- resharper 단축키 망가지면 개발 못할듯이 힘들다.
+- 나도 어느날 갑자기 단축키가 안되는 순간이 왔는데
+- resharper, visual studio 리셋해도 안되더라...
 
 - visual studio reset
 https://msdn.microsoft.com/en-us/library/ms241273.aspx

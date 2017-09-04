@@ -9,7 +9,10 @@ tags:
 - study
 ---
 
-170529 instantapp 리서치
+<br>
+<br>
+<br>
+
 
 - instantapp 리서치
 - 며칠간 삽질끝에 결국은 실패...
@@ -18,5 +21,8 @@ tags:
 - 여기서부터 
 - https://github.com/HyundongHwang/MyAndroidInstAppTest
 
+<br>
+<br>
+<br>
 
 <script src="https://htmlpartitionsync.azurewebsites.net/api/PartitionJs?url=https%3A%2F%2Fgithub.com%2FHyundongHwang%2FMyAndroidInstAppTest%2Fblob%2Fmaster%2FREADME.md&amp;xpath=%2F%2Farticle"></script>

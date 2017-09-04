@@ -24,6 +24,9 @@ tags:
 
 <!-- /TOC -->
 
+<br>
+<br>
+<br>
 
 ## MS, IoT 전략 및 ‘윈도우 10 IoT 에디션’ 출시 발표
 http://platum.kr/archives/56200
@@ -63,7 +66,7 @@ http://ms-iot.github.io/content/en-US/win10/Glossary.htm
 
 ## wifi ap profile을 pc에서 디바이스로 옮겨서 연결
 http://ms-iot.github.io/content/en-US/win10/SetupWiFi.htm
-```bash
+```powershell
 # find the name of the profile you just added
 PC> netsh wlan show profiles 
 
@@ -86,7 +89,7 @@ DEVICE> ping /S <your WiFi adapter ip address> bing.com
 
 ## 디바이스와 powershell 세션 연결
 http://ms-iot.github.io/content/en-US/win10/samples/PowerShell.htm
-```bash
+```powershell
 PC> net start WinRM
 PC> Set-Item WSMan:\localhost\Client\TrustedHosts -Value <machine-name or IP Address>
 
@@ -121,7 +124,7 @@ http://www.ti.com/tool/cc2541dk-sensor
 
 ## 파일공유서비스 켜기/끄기 smb프로토콜
 http://ms-iot.github.io/content/en-US/win10/samples/SMB.htm
-```bash
+```powershell
 # 파일공유끄기
 DEVICE> reg add HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\lanmanserver /v Start /t REG_DWORD /d 0x3 /f
 
@@ -133,7 +136,7 @@ DEVICE> reg add HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\lanmanserve
 
 ## ftp 서버로 사용
 http://ms-iot.github.io/content/en-US/win10/samples/FTP.htm
-```bash
+```powershell
 DEVICE> start C:\Windows\System32\ftpd.exe <PATH_TO_DIRECTORY>
 ```
 

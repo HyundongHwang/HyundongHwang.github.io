@@ -15,5 +15,6 @@ eee : fff : hhh
 ccc : ddd
 ---
 
+| . | . |
 |---|---|
 | aaa | bbb |

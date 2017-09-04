@@ -85,12 +85,26 @@ tags:
 | 2 | 데이터링크 | 물리장비의 주소식별 | 브리지, 스위치 <br> Ethernet, Token Ring, FDDI |
 | 1 | 물리 | 물리적 매개체 | . |
 
+<br>
+<br>
+<br>
+
 
 # 클라이언트와 서버간의 데이타 캡슐화
 - ![](https://s26.postimg.org/mi37q5emx/screenshot_76.png)
 
+<br>
+<br>
+<br>
+
+
 # wireshark 설치
 - http://www.wireshark.org/download.html
+
+<br>
+<br>
+<br>
+
 
 # wireshark 환경설정
 ## 핵심적인정보만 표시하도록 컬럼추가/삭제
@@ -135,6 +149,11 @@ tags:
 - #68 패킷에서 HTTP 200 OK 응답확인
     - ![](https://s26.postimg.org/5vq8utb2x/screenshot_76.png)
 
+<br>
+<br>
+<br>
+
+
 # HTTP 패킷분석
 ## HTTP 패킷캡쳐
 - 기존에 네이버뉴스기사를 보면서 캡쳐해 두었던 test.pcapng 파일 로드
@@ -152,6 +171,10 @@ tags:
     - ![](https://s26.postimg.org/gb1h0uel5/screenshot_76.png)
     - 위와 같이 tcp.stream 번호를 증가시켜서 순차적인 HTTP 세션을 확인해 나갈수 있음.
     
+
+<br>
+<br>
+<br>
 
 
 
@@ -189,6 +212,11 @@ tags:
     - TCP 4-way teardown 분석 : #69 ~ #72
 
 
+<br>
+<br>
+<br>
+
+
 # HTTPS 패킷분석
 ## HTTPS 패킷캡쳐
 - 크롬웹브라우져를 시작하면서 구글에 자동로그인할때 발생하는 패킷캡쳐
@@ -201,6 +229,11 @@ tags:
 
 ## HTTPS 통신 시퀀스
 - ![](https://s26.postimg.org/yqzq3gwux/screenshot_76.png)
+
+
+<br>
+<br>
+<br>
 
 
 # UDP 패킷분석 - DNS 요청/응답
@@ -224,6 +257,12 @@ tags:
 
 
 
+<br>
+<br>
+<br>
+
+
+
 # DNS 응답
 - ![](https://s26.postimg.org/wjvhfjrkp/screenshot_76.png)
 
@@ -233,6 +272,11 @@ tags:
 | DNS 패킷 타입 | |응답 |
 | DNS 패킷 내용 | dns.msftncsi.com 의 ip address는 131.107.255.255 입니다. |
 
+
+
+<br>
+<br>
+<br>
 
 
 # ARP 패킷분석
@@ -264,6 +308,11 @@ tags:
 | 송신자 mac | a8:d0... |
 | 송신자 ip | 192.168.4.1 |
 | 내용 | 192.168.4.1 의 mac 은 a8:d0... 입니다. |
+
+
+<br>
+<br>
+<br>
 
 
 # 공격탐지#1 - 오퍼레이션 오로라
@@ -333,6 +382,9 @@ Content-Length: 11266
     - 희생자는 이 세션으로 셸 정보를 전송
 
 
+<br>
+<br>
+<br>
 
 
 

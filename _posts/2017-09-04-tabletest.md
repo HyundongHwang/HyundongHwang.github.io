@@ -18,5 +18,4 @@ ccc : ddd
 | . | . |
 |---|---|
 | aaa | bbb |
-| adfsadsadf
-asdfasfasfa | bbb |
+| adfsadsadf <br> asdfasfasfa | bbb |

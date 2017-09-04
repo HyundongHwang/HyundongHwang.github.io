@@ -46,6 +46,7 @@ SetComputerName [new machinename]
 ```
 
 ### Setting startup app:
+
 `IotStartup list lists` installed applications
 `IotStartup list headed lists` installed headed applications
 `IotStartup list headless lists` installed headless applications

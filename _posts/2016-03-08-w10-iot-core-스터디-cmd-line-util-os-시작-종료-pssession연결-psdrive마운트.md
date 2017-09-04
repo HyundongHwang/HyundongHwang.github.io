@@ -166,7 +166,8 @@ PS C:\> Enter-PSSession -ComputerName firstrp2 -Credential $cred
 
 
 ## 노트북, 디바이스간 파일공유
-```bash
+
+```powershell
 PS C:\temp> New-PSDrive -Name firstrp2 -PSProvider FileSystem -Root \\firstrp2\c$ -Credential firstrp2\administrator
 Name           Used (GB)     Free (GB) Provider      Root                                               
 ----           ---------     --------- --------      ----                                               

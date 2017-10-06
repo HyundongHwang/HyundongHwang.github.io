@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 171007 UniversalAdapter, Android에 Adapter를 없애기
+title: 171003 UniversalAdapter, Android에 Adapter를 없애기
 comments: true
 tags:
 - UniversalAdapter

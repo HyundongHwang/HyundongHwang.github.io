@@ -156,6 +156,7 @@ http://blog.tedd.no/2012/07/28/asyncawait-http-server-in-c/
 
 > 서버메인클래스
 > 클라이언트 접속처리
+
 ```c#
 class Listener
 {
@@ -195,6 +196,7 @@ class Listener
 ```
 
 > 서버에 접속한 클라이언트 처리
+
 ```c#
 class Client
 {
@@ -232,7 +234,7 @@ class Client
 		        break;
 		}
 		
-		}
+	}
 		
 	private bool ProcessHeader()
 	{
@@ -258,7 +260,7 @@ class Client
 		
 		}
 		return false;
-		}
+	}
 		
 	private async void SendFile(string file)
 	{
